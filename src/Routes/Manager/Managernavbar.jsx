@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../../context/AuthContext';
 
-const Navbar = () => {
+const ManagerNavbar = () => {
   const { user, logout } = useAuth();
 
   return (
-    <div className="navbar bg-gray-100 shadow-sm px-4">
+    <div className="navbar bg-gray-100 fixed top-0 shadow-sm px-4">
       {/* Left - Logo and Mobile Dropdown */}
       <div className="navbar-start">
         <div className="dropdown">
@@ -18,10 +18,7 @@ const Navbar = () => {
             </svg>
           </button>
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white rounded-box w-52">
-            <li><Link to="/">Home</Link></li>
-            {user && <li><Link to="/booking">Booking</Link></li>}
-            {user && <li><Link to="/profile">Profile</Link></li>}
-            <li><Link to="/about">About us</Link></li>
+          
             {!user ? (
               <li><Link to="/login">Login</Link></li>
             ) : (
@@ -30,7 +27,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <Link to="/" className="flex gap-2 items-center">
+        <Link to="/manager" className="flex gap-2 items-center">
           <img
             className="w-10 h-10"
             src="https://static.vecteezy.com/system/resources/previews/045/954/869/non_2x/hotel-icon-3d-design-png.png"
@@ -40,15 +37,6 @@ const Navbar = () => {
         </Link>
       </div>
 
-      {/* Center - Desktop Menu */}
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 text-gray-800">
-          <li><Link to="/">Home</Link></li>
-          {user && <li><Link to="/booking">Booking</Link></li>}
-          {user && <li><Link to="/profile">Profile</Link></li>}
-          <li><Link to="/about">About us</Link></li>
-        </ul>
-      </div>
 
       {/* Right - Login/Logout */}
       <div className="navbar-end">
@@ -62,4 +50,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default ManagerNavbar;
