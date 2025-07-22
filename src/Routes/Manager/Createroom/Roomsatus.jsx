@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import apiRequest from "../../../lib/axiosInstance";
-import ManagerNavbar from "../managernavbar";
+import ManagerNavbar from "../Managernavbar"
 
 const Roomstatus = () => {
   const [bookings, setBookings] = useState([]);

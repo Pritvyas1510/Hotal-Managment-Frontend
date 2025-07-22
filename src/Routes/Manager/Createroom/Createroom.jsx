@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import ManagerNavbar from "../managernavbar";
 import apiRequest from "../../../lib/axiosInstance";
 import { useNavigate } from "react-router-dom";
+import ManagerNavbar from "../Managernavbar"
 
 const CreateRoom = () => {
   const {

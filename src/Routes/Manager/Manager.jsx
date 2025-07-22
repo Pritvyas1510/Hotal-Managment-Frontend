@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { managerActions } from "../../Constant/manager";
-import ManagerNavbar from "./managernavbar";
+import ManagerNavbar from "./Managernavbar"
 
 const ManagerPage = () => {
   const { user } = useAuth();

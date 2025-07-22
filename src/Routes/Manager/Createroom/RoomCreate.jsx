@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext";
-import ManagerNavbar from "../managernavbar";
+import ManagerNavbar from "../Managernavbar"
 import { managerRoomActions } from "../../../Constant/manager";
 
 const RoomManagementPage = () => {
