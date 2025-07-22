@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import apiRequest from "../../../lib/axiosInstance";
 import { useForm } from "react-hook-form";
-import ManagerNavbar from "../managernavbar";
+import ManagerNavbar from "../Managernavbar";
 
 const EventCreate = () => {
   const { register, handleSubmit, reset } = useForm();

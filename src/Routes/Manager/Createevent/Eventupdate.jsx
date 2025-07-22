@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ManagerNavbar from "../managernavbar";
+import ManagerNavbar from "../Managernavbar";
 import apiRequest from "../../../lib/axiosInstance";
 import { useForm } from "react-hook-form";
 
